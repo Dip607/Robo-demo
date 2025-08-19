@@ -9,12 +9,12 @@ class MockAgent:
         logs = []
         logs.append(f"[{self.name}] Started task: {task}")
         for step in range(1, 4):
-            time.sleep(0.5)  
+            time.sleep(0.5)  # mimic work
             logs.append(f"[{self.name}] Progress {step*33}%...")
         logs.append(f"[{self.name}] Completed task: {task} ✅")
         return logs
 
-
+# Agents list
 AGENTS = {
     "venue": MockAgent("VenueAgent"),
     "email": MockAgent("EmailAgent"),

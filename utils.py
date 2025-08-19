@@ -1,4 +1,5 @@
 def decompose_task(query: str):
+    # simple rule-based decomposition (mocked LLM)
     if "workshop" in query.lower():
         return [
             ("Book venue", "venue"),
